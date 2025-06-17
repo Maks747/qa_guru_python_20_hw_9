@@ -33,13 +33,13 @@ class RegistrationPage:
             f'.react-datepicker__day--0{day}:not(.react-datepicker__day--outside-month)'
         ).click()
 
-    def fill_subjects(self, value):
+    def select_subjects(self, value):
             browser.element('#subjectsInput').type(value).press_enter()
 
-    def fill_hobbies(self, value):
+    def choose_hobbies(self, value):
         browser.all('#hobbiesWrapper label').element_by(have.exact_text(value)).click()
 
-    def fill_picture(self, file):
+    def upload_picture(self, file):
         browser.element('#uploadPicture').set_value(
             os.path.abspath(f'resources/{file}')
             )
@@ -47,13 +47,13 @@ class RegistrationPage:
     def fill_address(self, value):
         browser.element('#currentAddress').type(value)
 
-    def fill_state(self, value):
+    def select_state(self, value):
         browser.element('#state').click()
         browser.all('[id^=react-select][id*=option]').element_by(
             have.exact_text(value)
         ).click()
 
-    def fill_city(self, value):
+    def select_city(self, value):
         browser.element('#city').click()
         browser.all('[id^=react-select][id*=option]').element_by(
             have.exact_text(value)

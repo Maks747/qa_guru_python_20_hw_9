@@ -11,12 +11,12 @@ def test_practice_form_filling():
     registration_page.choose_gender('Male')
     registration_page.fill_phone_number('1234567891')
     registration_page.fill_birthday('1990','April','20')
-    registration_page.fill_subjects('Computer Science')
-    registration_page.fill_hobbies('Sports')
-    registration_page.fill_picture('beautiful_tropical_beach_sea_ocean.png')
+    registration_page.select_subjects('Computer Science')
+    registration_page.choose_hobbies('Sports')
+    registration_page.upload_picture('beautiful_tropical_beach_sea_ocean.png')
     registration_page.fill_address('Street, 15 house')
-    registration_page.fill_state('Haryana')
-    registration_page.fill_city('Karnal')
+    registration_page.select_state('Haryana')
+    registration_page.select_city('Karnal')
 
     #Подтверждаем заполнение данных
     registration_page.submit()
